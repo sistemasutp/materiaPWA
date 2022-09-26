@@ -1,0 +1,87 @@
+/*
+	*** EASY LEVEL ***
+
+	Case one: 
+	Input: digits = [1,2,3]
+	Output: [1,2,4]
+
+	Case two:
+	Input: digits = [4,3,2,1]
+	Output: [4,3,2,2]
+
+	Case three:
+	Input: digits = [9]
+	Output: [1,0]
+
+	Case four:
+	Intput: digits = [9,9]
+	Output: digits = [1,0,0]
+*/
+/* Data input */
+digits = [9,9];
+/* -- -- -- -- -- -- */
+//Change the input name 
+input = digits;
+
+//Create null array
+newArray = [];
+
+//Read al the values from the input
+for (var i = input.length - 1; i >= 0; i--) {
+	input[i];
+
+	//Cretate a new array inverted
+	newArray.push(input[i]);
+}
+
+//The new array is inverted again
+newArray.reverse();
+
+//Convert the array to int and plus one
+response = parseInt(newArray.join(''))+1;
+
+//This function make a int from string
+let toInt = num => Number(num);
+
+//Convert the number to array and separated with comas.
+output = Array.from(String(response), toInt);
+/* -- -- -- -- -- -- */
+//if the input is [9,9], the output going to be [1,0,0]
+console.log(output);
+
+/*
+	IMPORTAN:
+	This code works with the case 1, case 2, case 3 and case 4
+	but, when the number has 19 or more characters, on the 
+	funtion "parseInt()" returns a diferent number.
+
+	For example, if:
+	
+	strinNunber = '6145390195186705543';
+	intNumber = parseInt(strinNunber);
+	console.log(intNumber);
+
+	the output inside the console is:
+	6145390195186705000
+	and it should be:
+	6145390195186705543
+
+	-----------------------------------------------------------
+
+	By the other hand, this code works successfully
+
+	input = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3];
+
+	for(let i = input.length - 1; i >= 0; i--) {
+	    input[i]++;
+	    if( input[i] > 9 ){
+	        input[i] = 0;
+	    } else{
+	        input;
+	    }
+	}
+	input.unshift(1);
+	console.log(input);
+
+	output = [6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,4]
+*/

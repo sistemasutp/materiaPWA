@@ -1,0 +1,17 @@
+/**
+ * @param {number[]} digits
+ * @return {number[]}
+ */
+var plusOne = function(digits) {
+  input = digits;
+  newArray = [];
+  for (var i = input.length-1; i >= 0; i--){
+    input[i];
+    newArray.push(input[i]);
+  }
+  newArray.reverse();
+  response = parseInt(newArray.join(''))+1;
+  let toInt = num => Number(num);
+  digits = Array.from(String(response), toInt);
+  return digits;
+};

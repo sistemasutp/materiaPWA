@@ -1,0 +1,42 @@
+
+1.-INSTALAR PYTHON
+2.INSTALAR PIP
+  pip --version (para saber si esta instalado pip)
+
+3.-CREAR ENTORNO VIRTUAL (VENV)
+   https://flask.palletsprojects.com/en/2.0.x/installation/ FLASK DOCUMENTACIÓN
+
+   $ python3 -m venv venv 
+   $ . venv/bin/activate
+
+   pip list (debera salir como 2 0 3 librerias)
+
+4.-LUEGO INSTALAR :
+   FLASK: $ pip install Flask
+   SQLALCHEMY: https://pypi.org/project/flask-sqlalchemy/
+   PYMYSQL:https://pypi.org/project/PyMySQL/
+
+
+
+
+create database blog_db;
+
+CREATE TABLE `users` (  
+`id` int (11) AUTO_INCREMENT,  
+`username`  varchar (50) DEFAULT NULL,  
+`password` text (50) DEFAULT NULL,  
+PRIMARY KEY (`id`)
+);
+
+
+CREATE TABLE `posts` (  
+`id` int (11) AUTO_INCREMENT,  
+`author`  integer DEFAULT NULL,  
+`title` varchar (100) DEFAULT NULL,
+`body` text (10000) DEFAULT NULL,  
+`created` datetime DEFAULT NULL,    
+PRIMARY KEY (`id`)
+);
+
+
+5.- configura en config.py y ejecuta python main.py
